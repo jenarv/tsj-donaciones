@@ -12,10 +12,10 @@ define('DB_CHARSET', 'utf8mb4');
 
 // Configuración de correo electrónico
 define('SMTP_HOST', 'smtp.gmail.com');
-define('SMTP_USER', 'jennyfermiryam@gmail.com');
-define('SMTP_PASS', 'lujy yndo pcnw galm');
+define('SMTP_USER', '');
+define('SMTP_PASS', '');
 define('SMTP_PORT', 587);
-define('SMTP_FROM', 'jennyfermiryam@gmail.com');
+define('SMTP_FROM', '');
 define('SMTP_FROM_NAME', 'TSJ Zapopan - Donaciones');
 
 // URL base del sistema
