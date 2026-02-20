@@ -1,0 +1,228 @@
+/**
+ * LAYOUT STYLES
+ * Header, navigation, and main structure
+ */
+
+/* ============================================================================
+   LOGIN SCREEN
+   ========================================================================= */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  margin: 0 0 10px;
+  color: var(--color-text-medium);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.login-box p {
+  color: var(--color-text-light);
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* ============================================================================
+   DASHBOARD
+   ========================================================================= */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+}
+
+/* ============================================================================
+   HEADER
+   ========================================================================= */
+.admin-header {
+  background: white;
+  box-shadow: var(--shadow-header);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+.header-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 20px var(--content-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--color-text-medium);
+  font-weight: 600;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ============================================================================
+   NAVIGATION
+   ========================================================================= */
+.admin-nav {
+  background: white;
+  border-bottom: 2px solid var(--color-border-light);
+  width: 100%;
+}
+
+.admin-nav-inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  gap: 5px;
+  box-sizing: border-box;
+}
+
+.nav-tab {
+  padding: 15px 25px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.nav-tab:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.nav-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+/* ============================================================================
+   MAIN CONTENT
+   ========================================================================= */
+.admin-content {
+  flex: 1;
+  max-width: var(--content-max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--content-padding);
+  box-sizing: border-box;
+}
+
+/* ============================================================================
+   RESPONSIVE - TABLET
+   ========================================================================= */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 30px;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .header-content h1 {
+    font-size: 20px;
+  }
+
+  .admin-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-nav-inner {
+    padding: 0 20px;
+    min-width: min-content;
+  }
+
+  .nav-tab {
+    white-space: nowrap;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE - MOBILE
+   ========================================================================= */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-box {
+    padding: 25px;
+  }
+
+  .login-box h2 {
+    font-size: 22px;
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .btn-logout {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+  }
+}

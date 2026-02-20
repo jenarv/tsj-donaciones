@@ -1,0 +1,14 @@
+{
+    "name": "tsj/tsj-donaciones",
+    "description": "TSJ Donaciones",
+    "autoload": {
+        "psr-4": {
+            "Tsj\\TsjDonaciones\\": "src/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^7.0",
+        "phpoffice/phpword": "^1.1",
+        "dompdf/dompdf": "^3.1"
+    }
+}

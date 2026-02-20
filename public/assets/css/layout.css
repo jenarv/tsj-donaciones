@@ -1,0 +1,248 @@
+/**
+ * LAYOUT STYLES
+ * Page structure and layout
+ */
+
+/* ============================================================================
+   CONTAINER
+   ========================================================================= */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+/* ============================================================================
+   LOGO SECTION
+   ========================================================================= */
+.logo-section {
+  background-color: white;
+  padding: 30px;
+  text-align: center;
+  border-bottom: 2px solid var(--color-bg);
+}
+
+.form-image {
+  margin-bottom: 1rem;
+  width: 50%;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================================
+   HEADER
+   ========================================================================= */
+.header {
+  background-color: white;
+  text-align: center;
+}
+
+.header h1 {
+  padding-top: 3%;
+  font-size: 28px;
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+
+.header h2 {
+  font-size: 20px;
+  color: #4a5278;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.header p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+/* ============================================================================
+   PROGRESS INDICATOR
+   ========================================================================= */
+.progress-container {
+  padding: 30px;
+  background-color: white;
+  border-bottom: 2px solid var(--color-bg);
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-border-light);
+  color: var(--color-text-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number,
+.step.completed .step-number {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.step-label {
+  font-size: 13px;
+  color: var(--color-text-lighter);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.step.active .step-label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.step.completed .step-label {
+  color: var(--color-primary);
+}
+
+.step-line {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background-color: var(--color-border-light);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.step:last-child .step-line {
+  display: none;
+}
+
+.step.completed .step-line {
+  background-color: var(--color-primary);
+}
+
+/* ============================================================================
+   FORM
+   ========================================================================= */
+
+.form-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+  filter: grayscale(20%);
+  transition: opacity 0.3s ease;
+}
+
+.form-content {
+  padding: 40px;
+  min-height: 400px;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.step-title {
+  font-size: 22px;
+  color: var(--color-text);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ============================================================================
+   RESPONSIVE - TABLET
+   ========================================================================= */
+@media (max-width: 768px) {
+  .container {
+    border-radius: var(--radius-md);
+  }
+
+  .logo-section {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .header h2 {
+    font-size: 18px;
+  }
+
+  .progress-container {
+    padding: 20px;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .step-label {
+    font-size: 11px;
+  }
+
+  .form-content {
+    padding: 25px 20px;
+  }
+
+  .step-title {
+    font-size: 20px;
+  }
+
+  .confirmation-title {
+    font-size: 24px;
+  }
+
+  .confirmation-text {
+    font-size: 15px;
+  }
+}
+
+/* ============================================================================
+   RESPONSIVE - MOBILE
+   ========================================================================= */
+@media (max-width: 480px) {
+  .steps {
+    gap: 5px;
+  }
+
+  .step-label {
+    font-size: 10px;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}

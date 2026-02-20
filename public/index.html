@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propuesta de Donación - TSJ Zapopan</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo Section -->
+      <div class="logo-section">
+        <img class="form-image" src="/tsj-donaciones/img/logo.png" alt="TSJ Zapopan" />
+      </div>
+
+      <!-- Header -->
+      <div class="header">
+        <h1>Propuesta de donación para titulación</h1>
+        <h2>TSJ Zapopan</h2>
+      </div>
+
+      <!-- Google Sign-In Section -->
+      <div id="auth-section" class="auth-section">
+        <div id="login-required" class="auth-card">
+          <h3>Inicia sesión con tu cuenta de Google</h3>
+          <p>
+            Para enviar una solicitud de donación, debes iniciar sesión con tu
+            cuenta institucional de Google.
+          </p>
+          <button type="button" id="google-signin-btn" class="google-signin-btn">
+            <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M17.6 9.2l-.1-1.8H9v3.4h4.8C13.6 12 13 13 12 13.6v2.2h3a8.8 8.8 0 0 0 2.6-6.6z" fill="#4285F4" />
+                <path d="M9 18c2.4 0 4.5-.8 6-2.2l-3-2.2a5.4 5.4 0 0 1-8-2.9H1V13a9 9 0 0 0 8 5z" fill="#34A853" />
+                <path d="M4 10.7a5.4 5.4 0 0 1 0-3.4V5H1a9 9 0 0 0 0 8l3-2.3z" fill="#FBBC05" />
+                <path d="M9 3.6c1.3 0 2.5.4 3.4 1.3L15 2.3A9 9 0 0 0 1 5l3 2.4a5.4 5.4 0 0 1 5-3.7z" fill="#EA4335" />
+              </g>
+            </svg>
+            Continuar con Google
+          </button>
+          <p class="auth-note">
+            Utiliza tu correo institucional (@zapopan.tecmm.edu.mx)
+          </p>
+        </div>
+
+        <div id="user-info" class="auth-card" style="display: none">
+          <div class="user-profile">
+            <img id="user-picture" src="" alt="Profile" class="user-picture" />
+            <div class="user-details">
+              <p class="user-name" id="user-name"></p>
+              <p class="user-email" id="user-email"></p>
+            </div>
+          </div>
+
+          <div id="request-status" class="request-status" style="display: none">
+            <!-- Status will be filled by JavaScript -->
+          </div>
+
+          <button type="button" id="logout-btn" class="logout-btn">
+            Cerrar sesión
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress Indicator -->
+      <div class="progress-container">
+        <div class="steps" id="progress-steps">
+          <!-- Steps will be generated dynamically -->
+        </div>
+      </div>
+
+      <!-- Form Container -->
+      <form id="donationForm">
+        <div id="form-steps-container">
+          <!-- Form steps will be loaded dynamically -->
+        </div>
+      </form>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/components/progress.js"></script>
+    <script src="assets/js/components/notification.js"></script>
+    <script src="assets/js/components/loader.js"></script>
+    <script src="assets/js/modules/auth.js"></script>
+    <script src="assets/js/modules/catalog.js"></script>
+    <script src="assets/js/modules/formSteps.js"></script>
+    <script src="assets/js/modules/formSubmit.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
